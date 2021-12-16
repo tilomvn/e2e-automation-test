@@ -2,11 +2,12 @@
 * Jasmine: https://jasmine.github.io/
 * Must have nodejs installed in mechine
 * Setup cmd:
-  npm install
-  npm install -g protractor
-  npm install -g webdriver-manager
-  webdriver-manager update
-  webdriver-manager start
+  - npm install
+  - npm install -g protractor
+  - npm install -g webdriver-manager
+  - webdriver-manager update
+  - webdriver-manager start
+* Run test: npm run test-e2e-demo
 * Testing Report: ./e2e/report/index.html
 * Testing Spec: Page Objects
 * Testing Suites: update new suite into protractor.conf.js
