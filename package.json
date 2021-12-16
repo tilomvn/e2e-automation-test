@@ -1,0 +1,35 @@
+{
+  "name": "e2e_testing",
+  "version": "1.0.0",
+  "scripts": {
+    "test-e2e": "protractor e2e/protractor.conf.js",
+    "test-e2e-demo": "protractor e2e/protractor-demo.conf.js"
+  },
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "exceljs": "^4.3.0",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.9.1",
+    "@types/jasminewd2": "^2.0.10",
+    "@types/jquery": "^3.5.7",
+    "@types/lodash": "^4.14.175",
+    "@types/node": "~16.10.5",
+    "@typescript-eslint/eslint-plugin": "4.28.2",
+    "@typescript-eslint/parser": "4.28.2",
+    "jasmine": "^3.10.0",
+    "jasmine-core": "^3.10.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "protractor": "~7.0.0",
+    "protractor-angular-screenshot-reporter": "^0.1.2",
+    "ts-node": "~7.0.0",
+    "typescript": "~4.3.5"
+  },
+  "resolutions": {
+    "webpack": "^5.0.0"
+  }
+}
