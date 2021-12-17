@@ -11,7 +11,7 @@ exports.config = {
   specs: [
     // './src/**/*.e2e-spec.ts'                        // all test
     './src/**/login.e2e-spec.ts',                    // login test
-    //'./src/**/login-failed.e2e-spec.ts',                    // login failed
+    //'./src/**/loginfailed.e2e-spec.ts',                    // login failed
   ],
 
   suites: {

@@ -1,28 +1,32 @@
 //import { Workbook, Worksheet } from 'exceljs';
 import { browser, By, logging, protractor } from 'protractor';
 import { LoginPage } from '../../page-objects/login.po';
+import { LoginSessionPage } from '../../page-objects/loginsession.po';
 
 describe('DD#01-Login Page', () => {
   var loginPage: LoginPage;
+  var loginSessionPage: LoginSessionPage;
 
-  beforeEach(async () => {
+  beforeAll(() => {
     // set implicit time to 30 seconds
     //browser.manage().timeouts().implicitlyWait(30000);
     browser.waitForAngularEnabled(false);
     browser.driver.manage().window().maximize();
     loginPage = new LoginPage();
+    loginSessionPage = new LoginSessionPage();
   });
 
-  it('Test case 1: Load Login Page', async () => {
+  it('Test case 1: Load Login Page', () => {
     loginPage.get();
-    browser.sleep(1000);
+    browser.sleep(3000);
+
     expect(browser.driver.getCurrentUrl()).toEqual(browser.baseUrl + "login");
     expect(loginPage.getAuthenticityToken()).toContain("==");
   });
 
-  it('Test case 2: Login Failed', async () => {
+  it('Test case 2: Login Failed', () => {
     loginPage.get();
-    browser.sleep(1000);
+    browser.sleep(2000);
 
     loginPage.setUserName("userName");
     browser.sleep(1000);
@@ -30,13 +34,12 @@ describe('DD#01-Login Page', () => {
     browser.sleep(1000);
 
     loginPage.doLogin();
-    browser.sleep(1000);
+    browser.sleep(2000);
 
-    let loginError = browser.driver.findElement(By.className("container-lg px-2"));
-    expect(loginError.getText()).toContain("Incorrect username or password.");
+    expect(loginSessionPage.getError()).toContain("Incorrect username or password.");
   });
 
-  afterEach(async () => {
+  afterAll(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
 
