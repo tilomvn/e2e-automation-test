@@ -22,7 +22,7 @@ export class LoginPage {
     this.passwordInput.sendKeys(password);
   };
 
-  doLogin = async () => {
+  doLogin = () => {
     this.loginButton.submit();
   };
 };
