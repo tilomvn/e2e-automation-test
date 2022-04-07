@@ -1,6 +1,6 @@
 # End To End Automation Test Using Jasmine(Mocha, Cucumber, Serenity)
 * Jasmine: https://jasmine.github.io/
-* Must have nodejs installed in mechine
+* Must have nodejs installed in machine
 * Setup cmd:
   - npm install
   - npm install -g protractor
