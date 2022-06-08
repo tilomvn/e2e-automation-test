@@ -46,3 +46,4 @@ testem.log
 Thumbs.db
 package-lock.json
 /e2e/report
+/e2e/_latest
