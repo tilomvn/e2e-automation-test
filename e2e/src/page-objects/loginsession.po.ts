@@ -1,7 +1,7 @@
 import { browser, By, element } from 'protractor';
 
 export class LoginSessionPage {
-  loginError = element(By.className("container-lg px-2"));
+  loginError = element.all(By.className("px-2")).last();
   loginButton = element(By.name('commit'));
 
   getError = () => {

@@ -11,3 +11,4 @@
 * Testing Report: ./e2e/report/index.html
 * Testing Spec: Page Objects
 * Testing Suites: update new suite into protractor.conf.js
+* Check to update webdriver manager if don't run in long time

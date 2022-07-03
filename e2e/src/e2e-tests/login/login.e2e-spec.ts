@@ -21,7 +21,7 @@ describe('DD#01-Login Page', () => {
     browser.sleep(1000);
 
     expect(browser.driver.getCurrentUrl()).toEqual(browser.baseUrl + "login");
-    expect(loginPage.getAuthenticityToken()).toContain("==");
+    expect(loginPage.getAuthenticityToken()).toContain("-");
   });
 
   it('Test case 2: Login Failed', async () => {
